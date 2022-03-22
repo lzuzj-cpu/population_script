@@ -3,8 +3,6 @@ from decimal import *
 from multiprocessing import Pool
 
 window_gff_result=sys.argv[1]
-#Chrom  Start   End     D       Fdm     numerator       denominator     FDnumerator     FDMdenominator  All_snp Avaible_snp  Type
-# 0      1        2     3       4           5              6               7                 8           9         10          11
 
 def read_result(file_):
     with open(file_) as fp:   
