@@ -63,11 +63,11 @@ There are three scripts for calculating gene flow of genes
 
 1. `01.genome_split.py` create a window file including CDS,intron,upstream and downstream ,the number of `10000` is the length of upstream and downstream, and then you can calculate Gene flow of destination area:
 
-python3 01.genome_split.py genome.gff 10000 > gff.gene.window
+`python3 01.genome_split.py genome.gff 10000 > gff.gene.window`
 
-sed '1d' gff.gene.window | cut -f 1-3 > gene.window
+`sed '1d' gff.gene.window | cut -f 1-3 > gene.window`
 
-python3 D_Fdm_calculation2.py -o window.result -v VCF_FILE -l group_list --order group_order -c Window_file -wf gene.window
+`python3 D_Fdm_calculation2.py -o window.result -v VCF_FILE -l group_list --order group_order -c Window_file -wf gene.window`
 
 2. `05.D_Fdmwindow.result.map2giff.py` map `window.result` to gene:
 
