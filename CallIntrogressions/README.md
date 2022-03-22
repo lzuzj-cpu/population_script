@@ -1,15 +1,24 @@
-get_distances_normal.py
+# **CallIntrogressions**
+
+---
+
+## **Description**
+
+---
 
 This script is modified according to https://github.com/malonge/CallIntrogressions/blob/master/get_distances.py, a method used in ：
-Alonge, Michael, et al. "Major impacts of widespread structural variation on gene expression and crop improvement in tomato." Cell 182.1 (2020): 145-161.
 
-used to find putative introgressions with a SV vcf
+> Alonge, Michael, et al. "Major impacts of widespread structural variation on gene expression and crop improvement in tomato." Cell 182.1 (2020): 145-161.
 
+## **Usage**
 
+---
 
+```python
 usage: get_distances_normal.py [-h] [-m 5] [-o <out_dir>]
-                               <SVs.vcf> <group.txt> <SP>
+                              <SVs.vcf> <group.txt> <SP>
                                <reference.fasta.fai> <100000>
+
 
 Get Jaccard similarity between one_group and others.
 
@@ -26,3 +35,5 @@ optional arguments:
   -h, --help            show this help message and exit
   -m 5                  minimum number of SVs needed to calculate Jaccard
   -o <out_dir>          the out dir of saving results
+
+```
