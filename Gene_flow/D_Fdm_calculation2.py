@@ -4,7 +4,7 @@ import argparse
 from multiprocessing import Pool
 import logging
 #*------------------------
-#use for calculate D and Fd
+#use for calculate D and Fdm
 #zhangjin lzu 2022/2/25
 #-------------------------
 def read_windows(file_):
@@ -114,7 +114,6 @@ def calculate_D_fdm(window_list):
                     RefAltSupport[group][1][name]=1
         failGroupSupport=0
         for group in RefAltSupport:
-            #加 每个群体需要至少有一个个体：两个单倍型
             if len(RefAltSupport[group][1].keys())+len(RefAltSupport[group][0].keys())<2:
                 failGroupSupport=1
                 break
